@@ -6,12 +6,12 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import CustomFormField, { FormFieldType } from "../CustomFormField";
-import SubmitButton from "../SubmitButton";
-
 import { Form } from "@/components/ui/form";
 import { createUser } from "@/lib/actions/patient.actions";
 import { UserFormValidation } from "@/lib/validation";
+
+import CustomFormField, { FormFieldType } from "../CustomFormField";
+import SubmitButton from "../SubmitButton";
 
 import "react-phone-number-input/style.css";
 
@@ -63,8 +63,7 @@ export const PatientForm = () => {
             placeholder="Enter your full names"
             iconSrc="/assets/icons/user.svg"
             iconAlt="user"
-            // eslint-disable-next-line tailwindcss/classnames-order
-            className="bg-[#1e293b] border-none text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500"
+            className="border-none bg-[#1e293b] text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500"
           />
 
           <CustomFormField
@@ -75,8 +74,7 @@ export const PatientForm = () => {
             placeholder="Enter your email"
             iconSrc="/assets/icons/email.svg"
             iconAlt="email"
-            // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
-            className="border-none bg-[#1e293b] text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500"
+            className="border-none bg-[#1e293b] text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500"
           />
 
           <CustomFormField
@@ -90,7 +88,6 @@ export const PatientForm = () => {
         </div>
 
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
-
       </form>
     </Form>
   );
