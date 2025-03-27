@@ -11,17 +11,21 @@ const AdminPage = async () => {
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
-      <header className="admin-header">
-        <Link href="/" className="cursor-pointer">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            height={32}
-            width={162}
-            alt="logo"
-            className="h-8 w-fit"
-          />
+      <header className="admin-header flex items-center space-x-3">
+        <Link href="/" className="flex cursor-pointer items-center space-x-2">
+          <div className="bg-white/10 rounded-full p-2">
+            <Image
+              src="/assets/icons/easyh1.avif"
+              height={40}
+              width={40}
+              alt="EasyHealth Logo"
+              className="rounded-full"
+            />
+          </div>
+          <span className="text-white text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+            EasyHealth
+          </span>
         </Link>
-
         <p className="text-16-semibold">Admin Dashboard</p>
       </header>
 
@@ -33,7 +37,7 @@ const AdminPage = async () => {
           </p>
         </section>
 
-        <section className="admin-stat">
+        <section className="admin-stat flex space-x-4">
           <StatCard
             type="appointments"
             count={appointments.scheduledCount}

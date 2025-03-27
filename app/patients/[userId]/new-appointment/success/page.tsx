@@ -21,13 +21,19 @@ const RequestSuccess = async ({
     <div className=" flex h-screen max-h-screen px-[5%]">
       <div className="success-img">
         <Link href="/">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            height={1000}
-            width={1000}
-            alt="logo"
-            className="h-10 w-fit"
-          />
+        <div className="flex items-center justify-center gap-2">
+  <Image
+    src="/assets/icons/easyh1.avif"
+    height={60}
+    width={60}
+    alt="EasyHealth Logo"
+    className="rounded-full"
+  />
+  <span className="text-white text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+    EasyHealth
+  </span>
+</div>
+
         </Link>
 
         <section className="flex flex-col items-center">
