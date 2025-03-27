@@ -1,6 +1,5 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/lEflo_sc82g?feature=shared" target="_blank">
       <img src="https://github.com/adrianhajdin/healthcare/assets/151519281/a7dd73b6-93de-484d-84e0-e7f4e299167b" alt="Project Banner">
     </a>
   <br />
@@ -10,15 +9,6 @@
 ## <a name="introduction">🤖 Introduction</a>
 
 A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.
-
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- Next.js
-- Appwrite
-- Typescript
-- TailwindCSS
-- ShadCN
-- Twilio
 
 ## <a name="features">🔋 Features</a>
 
@@ -37,7 +27,5 @@ A healthcare patient management application that allows patients to easily regis
 👉 **Complete Responsiveness**: The application works seamlessly on all device types and screen sizes.
 
 👉 **File Upload Using Appwrite Storage**: Users can upload and store files securely within the app using Appwrite storage services.
-
-👉 **Manage and Track Application Performance Using Sentry**: The application uses Sentry to monitor and track its performance and detect any errors.
 
 and many more, including code architecture and reusability

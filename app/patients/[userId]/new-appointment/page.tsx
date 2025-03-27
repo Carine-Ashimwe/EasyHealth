@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-contradicting-classname */
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,12 +9,12 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
   const patient = await getPatient(userId);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#121212] via-[#1E1E1E] to-[#0A0A0A] flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl bg-[#1E1E1E]/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden">
-        <div className="flex items-center justify-between p-6 border-b border-white/10">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#121212] via-[#1E1E1E] to-[#0A0A0A] p-4">
+      <div className="w-full max-w-4xl overflow-hidden rounded-2xl bg-[#1E1E1E]/80 shadow-2xl backdrop-blur-md">
+        <div className="flex items-center justify-between border-b border-white/10 p-6">
           <div className="flex items-center space-x-4">
             <Link href="/" passHref>
-              <div className="bg-white/10 rounded-full p-2 cursor-pointer">
+              <div className="cursor-pointer rounded-full bg-white/10 p-2">
                 <Image
                   src="/assets/icons/easyh1.avif"
                   height={40}
@@ -23,12 +24,12 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
                 />
               </div>
             </Link>
-            <span className="text-white text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent text-white">
               EasyHealth
             </span>
           </div>
         </div>
-        
+
         <div className="p-8">
           <AppointmentForm
             patientId={patient?.$id}
@@ -36,8 +37,8 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
             type="create"
           />
         </div>
-        
-        <div className="text-center text-gray-500 p-4 border-t border-white/10 text-sm">
+
+        <div className="border-t border-white/10 p-4 text-center text-sm text-gray-500">
           © 2025 EasyHealth
         </div>
       </div>

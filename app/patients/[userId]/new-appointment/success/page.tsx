@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-contradicting-classname */
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,19 +22,18 @@ const RequestSuccess = async ({
     <div className=" flex h-screen max-h-screen px-[5%]">
       <div className="success-img">
         <Link href="/">
-        <div className="flex items-center justify-center gap-2">
-  <Image
-    src="/assets/icons/easyh1.avif"
-    height={60}
-    width={60}
-    alt="EasyHealth Logo"
-    className="rounded-full"
-  />
-  <span className="text-white text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-    EasyHealth
-  </span>
-</div>
-
+          <div className="flex items-center justify-center gap-2">
+            <Image
+              src="/assets/icons/easyh1.avif"
+              height={60}
+              width={60}
+              alt="EasyHealth Logo"
+              className="rounded-full"
+            />
+            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent text-white">
+              EasyHealth
+            </span>
+          </div>
         </Link>
 
         <section className="flex flex-col items-center">

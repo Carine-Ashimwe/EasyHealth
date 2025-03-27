@@ -13,7 +13,7 @@ const AdminPage = async () => {
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
       <header className="admin-header flex items-center space-x-3">
         <Link href="/" className="flex cursor-pointer items-center space-x-2">
-          <div className="bg-white/10 rounded-full p-2">
+          <div className="rounded-full bg-white/10 p-2">
             <Image
               src="/assets/icons/easyh1.avif"
               height={40}
@@ -22,7 +22,7 @@ const AdminPage = async () => {
               className="rounded-full"
             />
           </div>
-          <span className="text-white text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent text-white">
             EasyHealth
           </span>
         </Link>
