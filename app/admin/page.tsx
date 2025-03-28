@@ -8,12 +8,23 @@ import { DataTable } from "@/components/table/DataTable";
 import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
 
 const AdminPage = async () => {
-  const appointments = await getRecentAppointmentList();
+  let appointments;
+  try {
+    appointments = await getRecentAppointmentList();
+  } catch (error) {
+    return <div>Error loading appointments</div>;
+  }
 
   // Safe check for undefined or null appointments
   if (!appointments) {
     return <div>Error loading appointments</div>;
   }
+
+  // Safe check for scheduledCount, pendingCount, and cancelledCount
+  const scheduledCount = appointments.scheduledCount || 0;
+  const pendingCount = appointments.pendingCount || 0;
+  const cancelledCount = appointments.cancelledCount || 0;
+  const documents = appointments.documents || [];
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
@@ -45,25 +56,24 @@ const AdminPage = async () => {
         <section className="admin-stat flex space-x-4">
           <StatCard
             type="appointments"
-            count={appointments.scheduledCount || 0}
+            count={scheduledCount}
             label="Scheduled appointments"
             icon={"/assets/icons/appointments.svg"}
           />
           <StatCard
             type="pending"
-            count={appointments.pendingCount || 0}
+            count={pendingCount}
             label="Pending appointments"
             icon={"/assets/icons/pending.svg"}
           />
           <StatCard
             type="cancelled"
-            count={appointments.cancelledCount || 0}
+            count={cancelledCount}
             label="Cancelled appointments"
             icon={"/assets/icons/cancelled.svg"}
           />
         </section>
-        <DataTable columns={columns} data={appointments.documents || []} />{" "}
-        {/* Safe check for documents */}
+        <DataTable columns={columns} data={documents} />
       </main>
     </div>
   );
