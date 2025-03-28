@@ -10,6 +10,11 @@ import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
 const AdminPage = async () => {
   const appointments = await getRecentAppointmentList();
 
+  // Safe check for undefined or null appointments
+  if (!appointments) {
+    return <div>Error loading appointments</div>;
+  }
+
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
       <header className="admin-header flex items-center space-x-3">
@@ -37,29 +42,28 @@ const AdminPage = async () => {
             Start the day with managing new appointments
           </p>
         </section>
-
         <section className="admin-stat flex space-x-4">
           <StatCard
             type="appointments"
-            count={appointments.scheduledCount}
+            count={appointments.scheduledCount || 0}
             label="Scheduled appointments"
             icon={"/assets/icons/appointments.svg"}
           />
           <StatCard
             type="pending"
-            count={appointments.pendingCount}
+            count={appointments.pendingCount || 0}
             label="Pending appointments"
             icon={"/assets/icons/pending.svg"}
           />
           <StatCard
             type="cancelled"
-            count={appointments.cancelledCount}
+            count={appointments.cancelledCount || 0}
             label="Cancelled appointments"
             icon={"/assets/icons/cancelled.svg"}
           />
         </section>
-
-        <DataTable columns={columns} data={appointments.documents} />
+        <DataTable columns={columns} data={appointments.documents || []} />{" "}
+        {/* Safe check for documents */}
       </main>
     </div>
   );
