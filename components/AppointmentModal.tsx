@@ -11,11 +11,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Appointment } from "@/types/appwrite.types";
+import { Appointment } from "@/types/appwrite.types"; // ✅ Kept above component imports
 
-import { AppointmentForm } from "./forms/AppointmentForm";
-
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css"; // ✅ CSS imports should be last
+import { AppointmentForm } from "./forms/AppointmentForm"; // ✅ Moved below type imports
 
 export const AppointmentModal = ({
   patientId,

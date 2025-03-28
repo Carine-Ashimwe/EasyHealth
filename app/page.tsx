@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-contradicting-classname */
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +20,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
               alt="patient"
               className="mr-1 size-12 rounded-full object-cover"
             />
-            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold leading-none tracking-tight text-transparent text-white">
+            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold leading-none tracking-tight text-white">
               EasyHealth
             </span>
           </div>
@@ -33,7 +32,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
 
         <PatientForm />
 
-        <div className="text-14-regular mt-6 flex justify-between text-gray-400">
+        <div className="mt-6 flex justify-between text-gray-400">
           <p>© 2025 EasyHealth</p>
           <Link href="/?admin=true" className="text-green-500">
             Admin

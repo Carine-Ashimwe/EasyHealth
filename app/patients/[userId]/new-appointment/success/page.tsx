@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-contradicting-classname */
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +18,7 @@ const RequestSuccess = async ({
   );
 
   return (
-    <div className=" flex h-screen max-h-screen px-[5%]">
+    <div className="flex h-screen max-h-screen px-[5%]">
       <div className="success-img">
         <Link href="/">
           <div className="flex items-center justify-center gap-2">
@@ -30,7 +29,7 @@ const RequestSuccess = async ({
               alt="EasyHealth Logo"
               className="rounded-full"
             />
-            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent text-white">
+            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-white">
               EasyHealth
             </span>
           </div>

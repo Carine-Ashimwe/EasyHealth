@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-contradicting-classname */
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +23,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
                 />
               </div>
             </Link>
-            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent text-white">
+            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-white">
               EasyHealth
             </span>
           </div>

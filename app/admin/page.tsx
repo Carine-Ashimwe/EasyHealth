@@ -23,7 +23,7 @@ const AdminPage = async () => {
               className="rounded-full"
             />
           </div>
-          <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent text-white">
+          <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent">
             EasyHealth
           </span>
         </Link>
