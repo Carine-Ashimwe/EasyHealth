@@ -1,6 +1,6 @@
 # EasyHealth
 
-![Project Banner](https://github.com/Carine-Ashimwe/EasyHealth/blob/main/public/assets/images/easyhealth-dashboard.jpg)
+![Project Banner](https://github.com/Carine-Ashimwe/EasyHealth/blob/main/public/assets/images/easyhealth-dashboard.png)
 
 ## 🚀 Introduction
 
