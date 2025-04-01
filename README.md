@@ -1,68 +1,46 @@
-<div align="center">
-  <br />
-      <img src="https://github.com/adrianhajdin/healthcare/assets/151519281/a7dd73b6-93de-484d-84e0-e7f4e299167b" alt="Project Banner">
-    </a>
-  <br />
+# EasyHealth
 
-  <h3 align="center">EasyHealth</h3>
+![Project Banner](https://github.com/Carine-Ashimwe/EasyHealth/blob/main/public/assets/images/easyhealth-dashboard.jpg)
 
-## <a name="introduction">🤖 Introduction</a>
+## 🚀 Introduction
 
-A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.
+**EasyHealth** is a modern healthcare patient management application built with **Next.js**. It allows patients to easily register, book, and manage their appointments with doctors. The application features administrative tools for scheduling, confirming, and canceling appointments, along with **SMS notifications** for enhanced communication.
 
-## <a name="features">🔋 Features</a>
+---
 
-👉 **Register as a Patient**: Users can sign up and create a personal profile as a patient.
+## 🛠️ Quick Start
 
-👉 **Book a New Appointment with Doctor**: Patients can schedule appointments with doctors at their convenience and can book multiple appointments.
+Follow the steps below to set up and run the project on your local machine.
 
-👉 **Manage Appointments on Admin Side**: Administrators can efficiently view and handle all scheduled appointments.
+### ✅ Prerequisites
 
-👉 **Confirm/Schedule Appointment from Admin Side**: Admins can confirm and set appointment times to ensure they are properly scheduled.
+Ensure you have the following installed:
 
-👉 **Cancel Appointment from Admin Side**: Administrators have the ability to cancel any appointment as needed.
-
-👉 **Send SMS on Appointment Confirmation**: Patients receive SMS notifications to confirm their appointment details.
-
-👉 **Complete Responsiveness**: The application works seamlessly on all device types and screen sizes.
-
-👉 **File Upload Using Appwrite Storage**: Users can upload and store files securely within the app using Appwrite storage services.
-
-and many more, including code architecture and reusability
-
-## <a name="quick-start"> Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
+- [Git](https://git-scm.com/) (for version control)
+- [Node.js](https://nodejs.org/en) (JavaScript runtime)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
-**Cloning the Repository**
+### 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/Carine-Ashimwe/EasyHealth.git
 cd easyhealth
 ```
 
-**Installation**
+### 📦 Install Dependencies
 
-Install the project dependencies using npm:
+Run the following command to install project dependencies:
 
 ```bash
 npm install
 ```
 
-**Set Up Environment Variables**
+### 🔧 Set Up Environment Variables
 
-Create a new file named `.env.local` in the root of your project and add the following content:
+Create a `.env.local` file in the root directory and add the following environment variables:
 
 ```env
-#APPWRITE
+# Appwrite Configuration
 NEXT_PUBLIC_ENDPOINT=https://cloud.appwrite.io/v1
 PROJECT_ID=
 API_KEY=
@@ -71,15 +49,32 @@ PATIENT_COLLECTION_ID=
 APPOINTMENT_COLLECTION_ID=
 NEXT_PUBLIC_BUCKET_ID=
 
+# Admin Credentials
 NEXT_PUBLIC_ADMIN_PASSKEY=123456
 ```
 
-Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite website](https://appwrite.io/).
+Replace the placeholder values with your actual **Appwrite** credentials. You can obtain them by signing up at [Appwrite](https://appwrite.io/).
 
-**Running the Project**
+### 🚀 Start the Development Server
+
+Run the following command to start the project:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+The application will be available at **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+---
+
+## 🎯 Features
+
+- 🏥 **Patient Registration** – Simple and user-friendly patient onboarding.
+- 📅 **Appointment Management** – Book, reschedule, or cancel appointments.
+- 📊 **Admin Dashboard** – Tools for managing patient data and schedules.
+- 📲 **SMS Notifications** – Automated alerts for appointment confirmations and reminders.
+- 🔒 **Secure & Scalable** – Built with modern authentication and database management.
+
+---
+
+Enjoy using **EasyHealth**! 🚀
